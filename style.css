@@ -1,0 +1,145 @@
+.item {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden; /*deixa a tela sem scroll*/
+    background-color: var(--background);
+}
+
+.item .pergunta0 {
+    font-size: 6rem;
+    color: #951215;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.item .pergunta1 {
+    font-size: 6rem;
+    color:  #e68302;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.item .pergunta2 {
+    font-size: 6rem;
+    color:  #04331d;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.item.active {
+    display: block;
+}
+
+.item .title {
+    font-size: 15rem;
+    color: #fff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    text-align: center;
+
+    z-index: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.item .fruit {
+    width: 50%;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    left: 75%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.item .fruit2 {
+    width: 50%;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    left: 0%;
+    top: 30%;
+    transform: rotate(35deg);
+    
+}
+
+.item .refri {
+    z-index: 2;
+    width: 600px;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#prev, #next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: #eee9;
+    border: 1px solid #eee9;
+    color: #eee;
+    font-size: x-large;
+    font-family: monospace;
+    cursor: pointer;
+    z-index: 4;
+    border-radius: 50%;
+}
+
+#prev {
+    left: 30px;
+}
+
+#next {
+    right: 30px;
+}
+
+@keyframes toActive {
+    from {
+        top: 0%;
+        opacity: 0;
+    }
+}
+
+@keyframes toActiveTitle {
+    from {
+        color :#000;
+        font-size: 8rem;
+        
+    }
+}
+
+.item.active img.fruit {
+    animation: toActive 1s ease-in-out 1;
+}
+
+.item.active img.fruit2 {
+    animation: toActive .8s ease-in-out 1;
+}
+
+.item.active .title {
+    animation: toActiveTitle 1s ease-in-out 1;
+}
